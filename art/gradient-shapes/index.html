@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gradient shapes — John Rising</title>
+    <meta name="description" content="Gradient shapes (2022), a generative artwork by John Rising. Animated. Algorithmic color. p5js.">
+    <link rel="canonical" href="https://johnrising.com/art/gradient-shapes/">
+    <meta name="color-scheme" content="light dark">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://johnrising.com/art/gradient-shapes/">
+    <meta property="og:title" content="Gradient shapes">
+    <meta property="og:description" content="Gradient shapes (2022), a generative artwork by John Rising. Animated. Algorithmic color. p5js.">
+    <meta property="og:image" content="https://johnrising.com/art/gradient-shapes/still.jpg">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@johnrising_">
+    <script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "VisualArtwork",
+    "name": "Gradient shapes",
+    "creator": {
+        "@type": "Person",
+        "name": "John Rising",
+        "url": "https://johnrising.com/"
+    },
+    "dateCreated": "2022-05-12",
+    "artform": "Generative art",
+    "artMedium": "p5.js",
+    "image": "https://johnrising.com/art/gradient-shapes/still.jpg",
+    "url": "https://johnrising.com/art/gradient-shapes/",
+    "description": "Animated. Algorithmic color. p5js."
+}
+    </script>
+    <link rel="stylesheet" href="../../style.css">
+</head>
+<body>
+    <header class="site">
+        <a href="../../">John Rising</a>
+    </header>
+
+    <main>
+        <article class="artwork">
+            <h1>Gradient shapes</h1>
+            <p class="meta">May 2022 · Generative, edition of 200</p>
+            <div class="frame" style="aspect-ratio: 1600 / 1600; width: min(100%, calc(80vh * 1600 / 1600))">
+                <iframe id="piece" title="Gradient shapes"></iframe>
+                <noscript><img src="still.jpg" alt="Gradient shapes"></noscript>
+            </div>
+            <p class="controls"><button id="reroll" type="button">New variation</button> · <a id="open" href="live/">Open full screen</a> · <a href="still.jpg">Still image</a></p>
+            <p>Animated. Algorithmic color. p5js.</p>
+            <p class="provenance">This is a program, not a picture: each load draws a new variation from a random seed. Originally minted on fxhash. The code here is byte-identical to the original on IPFS (<code>QmbVe9cD9RYzwDmhNQsEbxZpaHigXAH89epjd5bevsLDWu</code>).</p>
+            <p><a href="../">← All work</a></p>
+        </article>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 John Rising</p>
+    </footer>
+    <script>
+        (function () {
+            var abc = "123456789abcdefghijkmnopqrstuvwxyzABCDEFGHJKLMNPQRSTUVWXYZ";
+            var frame = document.getElementById("piece");
+            function hash() {
+                var h = "oo";
+                var r = new Uint32Array(49);
+                crypto.getRandomValues(r);
+                for (var i = 0; i < 49; i++) h += abc[r[i] % abc.length];
+                return h;
+            }
+            function roll() {
+                var h = hash();
+                var src = (location.protocol === "file:" ? "live/index.html" : "live/") + "?fxhash=" + h;
+                frame.src = src;
+                document.getElementById("open").href = src;
+            }
+            document.getElementById("reroll").addEventListener("click", roll);
+            roll();
+        })();
+    </script>
+    <script>if(location.protocol==="file:")addEventListener("click",function(e){var a=e.target.closest&&e.target.closest("a[href]");if(a&&a.protocol==="file:"&&/\/$/.test(a.pathname)){e.preventDefault();location.href=a.pathname+"index.html"+a.search+a.hash}});</script>
+</body>
+</html>

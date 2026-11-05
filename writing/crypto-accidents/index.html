@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crypto Accidents Aren't About Broken Parts — John Rising</title>
+    <meta name="description" content="Most accidents now happen when every part works exactly as designed. What rockets taught me about moving money on a blockchain.">
+    <link rel="canonical" href="https://johnrising.com/writing/crypto-accidents/">
+    <meta name="color-scheme" content="light dark">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://johnrising.com/writing/crypto-accidents/">
+    <meta property="og:title" content="Crypto Accidents Aren't About Broken Parts">
+    <meta property="og:description" content="Most accidents now happen when every part works exactly as designed.">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="@johnrising_">
+    <script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "Crypto Accidents Aren't About Broken Parts",
+    "description": "Most accidents now happen when every part works exactly as designed.",
+    "datePublished": "2024-11-11",
+    "author": {
+        "@type": "Person",
+        "name": "John Rising",
+        "url": "https://johnrising.com/"
+    },
+    "mainEntityOfPage": "https://johnrising.com/writing/crypto-accidents/"
+}
+    </script>
+    <link rel="stylesheet" href="../../style.css">
+</head>
+<body>
+    <header class="site">
+        <a href="../../">John Rising</a>
+    </header>
+
+    <main>
+        <article>
+            <h1>Crypto Accidents Aren't About Broken Parts</h1>
+            <p class="dek">Most accidents now happen when every part works exactly as designed.</p>
+            <p class="meta"><time datetime="2024-11-11">November 2024</time> · First published on Stackup</p>
+
+            <p>For decades, when something went wrong on a rocket, a spacecraft or a plane, we always did the same thing. We went looking for the part that broke.</p>
+            <p>But things have gotten a lot more complicated, especially now that there's software in just about everything. Most accidents today don't happen because something broke. They happen when every part does exactly what it was designed to do, but the system as a whole behaves in ways nobody intended.<sup><a href="#fn1" id="r1">1</a></sup></p>
+            <p>It took me years of building rockets to really see this. Then I started working on blockchain software, and it was everywhere. After all, software is just a list of instructions. It does exactly what you tell it to do, which isn't always what you meant.</p>
+
+            <p>Smart contract bugs get the headlines, but attackers have been moving on. Among the biggest DeFi hacks of 2023, the share of losses from smart contract exploits fell by more than half, and the share from compromised keys more than doubled.<sup><a href="#fn2" id="r2">2</a></sup> It turns out people are a lot easier to fool than audited code. More and more of the money walks right out the front door, approved by someone who thought they were signing something else. That's the part I want to talk about, the moment a human looks at a screen and decides to sign.</p>
+
+            <h2>Everyone hates safety people (for good reason)</h2>
+            <p>Look, there's no shortage of things to criticize crypto for. (Believe me, I've heard them all, and I agree with more of them than you'd think.) But the one thing I actually know how to help with is building systems that are less likely to blow up in your face.</p>
+            <p>Then again, telling other people what they got wrong is exactly the kind of thing that makes people hate safety people.</p>
+            <p>It's really easy to armchair quarterback someone else's system once it's failed. It's even kind of fun, in a perverse way. You get to list everything they should have done, then hold up your clean hands as proof you'd have done better. Of course they're clean. You watched the whole game from the sidelines while someone else did the work. (Honestly, this is like half of LinkedIn. Criticism is the cheapest insight money can buy, and the thought leadership crowd is buying it in bulk. It's bullshit, we all know it's bullshit, but the algorithm pushes it.)</p>
+            <p>When I was at Virgin Galactic, there was a blogger who really hated the program. Any flaw, any slip, any minor error, he was on it right away. After SpaceShipTwo broke up in 2014, he was so eager to make his point that he posted a photo of a boot with a foot still in it, separated from the rest of the pilot's body. And that's the real irony of the sideline critic. Malice is at least honest about wanting blood. Righteousness posts the corpse, then sits there refreshing the page to count the likes.</p>
+            <p>I really don't want to be that guy. Which is a little awkward, since the rest of this essay is me telling crypto companies what they're doing wrong.</p>
+            <p>So here's where I'm coming from. I've been on the other side of it. I once blew up a test stand we'd borrowed from NASA, and then I had to go explain it to NASA. Nobody in that room cared how insightful I was. They wanted to know what happened, why it happened, and what I was going to do about it.</p>
+            <p>So that's how I'm going to do this. Same three questions, for crypto wallets.</p>
+
+            <h2>What happened. The feedback loop is terrible</h2>
+            <p>Every time someone moves money for a company, they're running a feedback loop.</p>
+            <figure>
+            <img alt="Control loop with a user and their mental model of blockchain state above, the blockchain below, control actions going down and feedback coming up" loading="lazy" src="2.svg"/></figure>
+            <p>And traditional crypto wallets make every single part of that loop worse. The feedback is unclear. Did that transaction go through? What is this contract actually going to do? The feedback is slow, too. You wait for a confirmation, and then you keep waiting. The mental model is mostly a guess, because the thing you're being asked to sign is a wall of hex. And the controls are blunt. Whoever can sign can usually sign for anything.</p>
+            <p>Nothing in that loop is broken. The cryptography is close to unbreakable. Mistakes are still basically guaranteed.</p>
+            <p>This is why moving money at a lot of crypto companies looks like bomb disposal. Three people on a call, reading an address out loud to each other one character at a time.</p>
+
+            <h2>Why it happens. More signers won't save you</h2>
+            <p>When something scary happens, the instinct is to reach for a better part. If you think the problem is broken parts, you buy a hardware wallet and add more signers. If you think the problem is the loop, you ask what the signer actually sees before they sign. Those lead to very different products.</p>
+            <p>To be fair, hardware wallets and multisig solve a real problem. One stolen key shouldn't be enough to take everything, and if you don't have them, get them. But they protect the keys. They do nothing for the person holding them. Once there's enough money at stake, attackers stop trying to steal keys and start trying to fool the people who hold them.</p>
+            <p>This year has been a pretty brutal demonstration. In July, attackers took about $235 million out of WazirX's multisig wallet. In October, Radiant Capital lost about $50 million, and its signers were using hardware wallets. In both cases the signers were shown what looked like a routine transaction, and they approved it.<sup><a href="#fn3" id="r3">3</a></sup> Every signature was valid. Every key was safe. The loop is what failed.</p>
+
+            <h2>What to do about it. Fix what the signer sees</h2>
+            <p>Smart accounts are the best tool I know for this.<sup><a href="#fn4" id="r4">4</a></sup> Permissions can match each person's job, so the person who pays invoices can't drain the treasury. Transactions can show up as what they are to the business, payroll or a vendor payment, instead of a raw contract call. And operators get clear signals about status and risk, instead of squinting at a block explorer.</p>
+            <p>If you're a founder or on a board, ask to sit next to someone while they move a large amount of money. Watch what they see before they sign. If you can't tell what the transaction does from the screen, neither can they.</p>
+            <p>If you're an engineer, design permissions around jobs, and show every transaction as something a human can actually check, an amount, a recipient and a reason, before anyone is asked to sign it.</p>
+            <p>If you run operations, treat the three-person call as a warning light. Every time your team reads an address out loud, your tooling is asking humans to do a computer's job, and humans are terrible at that job.</p>
+
+            <h2>Nobody will find the broken part</h2>
+            <p>For decades, when something went wrong, we went looking for the part that broke. The next time a company's treasury goes missing, there's a good chance nobody finds one. Every key will be safe, every signature will be valid, and the money will still be gone.</p>
+            <p>Reliable parts are the easy part. Build for the person signing.</p>
+
+            <ol class="footnotes">
+            <li id="fn1">Engineers started noticing this shift in the late 1990s and early 2000s, after a run of aerospace losses where nothing physically broke. Ariane 5 blew up on its first launch in 1996 because of software reused from Ariane 4. In 1999 a Titan IV/Centaur put a Milstar satellite into a useless orbit because of one wrong constant in the flight software. Nancy Leveson's 2001 report <cite>Evaluating Accident Models Using Recent Aerospace Accidents</cite> is a good place to start. I go through more examples in chapter 2 of <a href="../../research/rising-2018-mit-thesis-safety-guided-design.pdf">my master's thesis</a>. <a href="#r1">↩</a></li>
+            <li id="fn2">From Halborn's analysis in Chainalysis's <a href="https://www.chainalysis.com/blog/crypto-hacking-stolen-funds-2024/" target="_blank" rel="noopener">2024 Crypto Crime Report</a>. Comparing 2023's top 50 DeFi hacks with earlier years, smart contract exploits fell from 47.0% of losses to 18.2%, and compromised private keys rose from 22.0% to 47.8%. Chainalysis's <a href="https://www.chainalysis.com/blog/2024-crypto-crime-mid-year-update-part-1/" target="_blank" rel="noopener">mid-year update</a> in August 2024 found attackers going back after centralized exchanges and leaning more on social engineering. <a href="#r2">↩</a></li>
+            <li id="fn3">WazirX, an Indian exchange, lost about $234.9 million from a multisig wallet on July 18, 2024. According to WazirX, its signers approved a transaction that the custody provider's interface showed differently from what was actually signed, and the signed transaction handed control of the wallet to the attackers. (The custody provider, Liminal, disputes where the compromise happened, but not that the signers saw one thing and signed another.) Radiant Capital lost about $50 million on October 16, 2024. Per <a href="https://medium.com/@RadiantCapital/radiant-post-mortem-fecd6cd38081" target="_blank" rel="noopener">its own post-mortem</a>, malware on three developers' devices made the Safe interface show legitimate transactions while their Ledger and Trezor hardware wallets signed malicious ones. Every transaction had been simulated and reviewed by multiple people. Since this was first published, Bybit lost about $1.5 billion in almost exactly the same way. I wrote about that one <a href="../the-bybit-lesson/">here</a>. <a href="#r3">↩</a></li>
+            <li id="fn4">Full disclosure, I co-founded Stackup, which built smart account infrastructure. Weigh my enthusiasm accordingly. <a href="#r4">↩</a></li>
+            </ol>
+        </article>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 John Rising</p>
+    </footer>
+    <script>if(location.protocol==="file:")addEventListener("click",function(e){var a=e.target.closest&&e.target.closest("a[href]");if(a&&a.protocol==="file:"&&/\/$/.test(a.pathname)){e.preventDefault();location.href=a.pathname+"index.html"+a.search+a.hash}});</script>
+</body>
+</html>

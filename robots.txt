@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+Disallow: /art/*/live/
+
+Sitemap: https://johnrising.com/sitemap.xml

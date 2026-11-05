@@ -22,11 +22,55 @@ header h1 {
     font-weight: 600;
 }
 
+header.intro {
+    display: flex;
+    align-items: center;
+    gap: 1.25rem;
+}
+
+.photo {
+    flex-shrink: 0;
+    width: 88px;
+    height: 88px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+@media (max-width: 480px) {
+    header.intro {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
+    }
+
+    .photo {
+        width: 72px;
+        height: 72px;
+    }
+}
+
+header.site a {
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.note {
+    display: block;
+    color: #666;
+    font-size: 0.875rem;
+}
+
+.links {
+    margin-top: 0.5rem;
+    color: #999;
+}
+
 section {
     margin-bottom: 2.5rem;
 }
 
-#about p {
+#about p,
+#art > p {
     margin-bottom: 1rem;
 }
 
@@ -37,35 +81,21 @@ h2 {
     color: #444;
 }
 
-h3 {
-    font-size: 0.875rem;
-    font-weight: 600;
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
-    color: #666;
-    margin-bottom: 0.75rem;
-}
-
-.writing-group {
-    margin-bottom: 1.75rem;
-}
-
-.writing-group:last-child {
-    margin-bottom: 0;
-}
-
 ul {
     list-style: none;
 }
 
 li {
+    position: relative;
+    padding-left: 1.5rem;
     margin-bottom: 0.625rem;
     font-size: 0.9375rem;
 }
 
 li::before {
     content: "—";
-    margin-right: 0.5rem;
+    position: absolute;
+    left: 0;
     color: #999;
 }
 
@@ -83,9 +113,226 @@ a:hover {
     font-size: 0.9375rem;
 }
 
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* ---- Inner pages */
+
+main > h1,
+article h1 {
+    font-size: 1.75rem;
+    font-weight: 600;
+    line-height: 1.25;
+    margin-bottom: 0.5rem;
+}
+
+.dek {
+    font-size: 1.125rem;
+    color: #666;
+    margin-bottom: 0.5rem;
+}
+
+.meta {
+    font-size: 0.875rem;
+    color: #999;
+    margin-bottom: 2rem;
+}
+
+.lede {
+    margin-bottom: 2rem;
+}
+
+/* ---- Essays */
+
+article p,
+article ul,
+article ol,
+article blockquote,
+article figure {
+    margin-bottom: 1.25rem;
+}
+
+article h2,
+article h3,
+article h4 {
+    font-size: 1.125rem;
+    font-weight: 600;
+    color: inherit;
+    margin: 2rem 0 0.75rem;
+}
+
+article h4 {
+    font-size: 1rem;
+}
+
+article ul,
+article ol {
+    padding-left: 1.5rem;
+}
+
+article ul {
+    list-style: disc;
+}
+
+article ol {
+    list-style: decimal;
+}
+
+article li {
+    padding-left: 0.25rem;
+    font-size: inherit;
+}
+
+article li::before {
+    content: none;
+}
+
+article blockquote {
+    padding-left: 1rem;
+    border-left: 2px solid #ddd;
+    color: #555;
+}
+
+article figure img {
+    display: block;
+    margin: 0 auto;
+}
+
+figcaption {
+    margin-top: 0.5rem;
+    font-size: 0.8125rem;
+    color: #888;
+    text-align: center;
+}
+
+sup a {
+    text-decoration: none;
+    font-size: 0.75em;
+    padding: 0 0.1em;
+}
+
+.footnotes {
+    margin-top: 3rem;
+    padding-top: 1rem;
+    border-top: 1px solid #ddd;
+    font-size: 0.875rem;
+    color: #666;
+}
+
+.footnotes li {
+    margin-bottom: 0.5rem;
+}
+
+code {
+    font-size: 0.8125rem;
+    word-break: break-all;
+}
+
+/* ---- Art */
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem 1.25rem;
+}
+
+.gallery li {
+    padding: 0;
+    margin: 0;
+}
+
+.gallery li::before {
+    content: none;
+}
+
+.gallery a {
+    display: block;
+    text-decoration: none;
+}
+
+.gallery img {
+    display: block;
+    width: 100%;
+    aspect-ratio: 1;
+    object-fit: contain;
+    background: #f3f3f3;
+}
+
+.gallery span {
+    display: inline-block;
+    margin-top: 0.5rem;
+    font-size: 0.875rem;
+}
+
+.gallery a:hover span:first-of-type {
+    text-decoration: underline;
+}
+
+.gallery .year {
+    color: #999;
+}
+
+.frame {
+    margin: 0 auto 0.75rem;
+    background: #f3f3f3;
+}
+
+.frame iframe,
+.frame img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
+.controls {
+    font-size: 0.875rem;
+    color: #999;
+}
+
+.controls button {
+    font: inherit;
+    color: #222;
+    background: none;
+    border: 0;
+    text-decoration: underline;
+    text-underline-offset: 2px;
+    cursor: pointer;
+}
+
+.controls button:hover {
+    color: #666;
+}
+
+.provenance {
+    font-size: 0.875rem;
+    color: #666;
+}
+
 footer {
     margin-top: 3rem;
     padding-top: 1.5rem;
     font-size: 0.875rem;
     color: #999;
+}
+
+@media (max-width: 480px) {
+    .gallery {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (prefers-color-scheme: dark) {
+    body { background: #111; color: #ddd; }
+    a, .controls button { color: #ddd; }
+    a:hover, .controls button:hover { color: #999; }
+    h2 { color: #bbb; }
+    .note, .dek, .provenance { color: #999; }
+    li::before, .links, footer, .meta, .controls, .gallery .year { color: #666; }
+    article blockquote { border-color: #333; color: #aaa; }
+    .footnotes { border-color: #333; color: #999; }
+    article figure img { background: #fff; padding: 0.75rem; border-radius: 4px; box-sizing: border-box; }
+    .gallery img, .frame { background: #1c1c1c; }
 }

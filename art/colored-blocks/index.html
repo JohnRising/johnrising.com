@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Colored blocks — John Rising</title>
+    <meta name="description" content="Colored blocks (2022), a generative artwork by John Rising. During the bubonic plague, Isaac Newton made important discoveries about the color spectrum.">
+    <link rel="canonical" href="https://johnrising.com/art/colored-blocks/">
+    <meta name="color-scheme" content="light dark">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://johnrising.com/art/colored-blocks/">
+    <meta property="og:title" content="Colored blocks">
+    <meta property="og:description" content="Colored blocks (2022), a generative artwork by John Rising. During the bubonic plague, Isaac Newton made important discoveries about the color spectrum.">
+    <meta property="og:image" content="https://johnrising.com/art/colored-blocks/still.jpg">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@johnrising_">
+    <script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "VisualArtwork",
+    "name": "Colored blocks",
+    "creator": {
+        "@type": "Person",
+        "name": "John Rising",
+        "url": "https://johnrising.com/"
+    },
+    "dateCreated": "2022-01-08",
+    "artform": "Generative art",
+    "artMedium": "p5.js",
+    "image": "https://johnrising.com/art/colored-blocks/still.jpg",
+    "url": "https://johnrising.com/art/colored-blocks/",
+    "description": "During the bubonic plague, Isaac Newton made important discoveries about the color spectrum.\n\nDuring the coronavirus pandemic, I used fake internet money to buy JPEGs.\n\nAnyway here's a script I wrote to help me wrap my head around how color works."
+}
+    </script>
+    <link rel="stylesheet" href="../../style.css">
+</head>
+<body>
+    <header class="site">
+        <a href="../../">John Rising</a>
+    </header>
+
+    <main>
+        <article class="artwork">
+            <h1>Colored blocks</h1>
+            <p class="meta">January 2022 · Generative, edition of 200</p>
+            <div class="frame" style="aspect-ratio: 1600 / 1600; width: min(100%, calc(80vh * 1600 / 1600))">
+                <iframe id="piece" title="Colored blocks"></iframe>
+                <noscript><img src="still.jpg" alt="Colored blocks"></noscript>
+            </div>
+            <p class="controls"><button id="reroll" type="button">New variation</button> · <a id="open" href="live/">Open full screen</a> · <a href="still.jpg">Still image</a></p>
+            <p>During the bubonic plague, Isaac Newton made important discoveries about the color spectrum.</p>
+            <p>During the coronavirus pandemic, I used fake internet money to buy JPEGs.</p>
+            <p>Anyway here&#x27;s a script I wrote to help me wrap my head around how color works.</p>
+            <p class="provenance">This is a program, not a picture: each load draws a new variation from a random seed. Originally minted on fxhash. The code here matches the original on IPFS, except that an unused sound library has been removed (<code>QmRicHGWdCuJeZNCEcqSFPRfLPQ2KuL8L2yyYzenkfw5EA</code>).</p>
+            <p><a href="../">← All work</a></p>
+        </article>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 John Rising</p>
+    </footer>
+    <script>
+        (function () {
+            var abc = "123456789abcdefghijkmnopqrstuvwxyzABCDEFGHJKLMNPQRSTUVWXYZ";
+            var frame = document.getElementById("piece");
+            function hash() {
+                var h = "oo";
+                var r = new Uint32Array(49);
+                crypto.getRandomValues(r);
+                for (var i = 0; i < 49; i++) h += abc[r[i] % abc.length];
+                return h;
+            }
+            function roll() {
+                var h = hash();
+                var src = (location.protocol === "file:" ? "live/index.html" : "live/") + "?fxhash=" + h;
+                frame.src = src;
+                document.getElementById("open").href = src;
+            }
+            document.getElementById("reroll").addEventListener("click", roll);
+            roll();
+        })();
+    </script>
+    <script>if(location.protocol==="file:")addEventListener("click",function(e){var a=e.target.closest&&e.target.closest("a[href]");if(a&&a.protocol==="file:"&&/\/$/.test(a.pathname)){e.preventDefault();location.href=a.pathname+"index.html"+a.search+a.hash}});</script>
+</body>
+</html>

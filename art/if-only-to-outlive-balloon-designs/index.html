@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>if only to outlive Balloon Designs — John Rising</title>
+    <meta name="description" content="if only to outlive Balloon Designs (2024), a generative artwork by John Rising. The full title of this piece is &quot;if only to outlive Balloon Designs with Pauline&quot; and comes from a poem by Billy Collins.">
+    <link rel="canonical" href="https://johnrising.com/art/if-only-to-outlive-balloon-designs/">
+    <meta name="color-scheme" content="light dark">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://johnrising.com/art/if-only-to-outlive-balloon-designs/">
+    <meta property="og:title" content="if only to outlive Balloon Designs">
+    <meta property="og:description" content="if only to outlive Balloon Designs (2024), a generative artwork by John Rising. The full title of this piece is &quot;if only to outlive Balloon Designs with Pauline&quot; and comes from a poem by Billy Collins.">
+    <meta property="og:image" content="https://johnrising.com/art/if-only-to-outlive-balloon-designs/still.jpg">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@johnrising_">
+    <script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "VisualArtwork",
+    "name": "if only to outlive Balloon Designs",
+    "creator": {
+        "@type": "Person",
+        "name": "John Rising",
+        "url": "https://johnrising.com/"
+    },
+    "dateCreated": "2024-02-09",
+    "artform": "Generative art",
+    "artMedium": "p5.js",
+    "image": "https://johnrising.com/art/if-only-to-outlive-balloon-designs/still.jpg",
+    "url": "https://johnrising.com/art/if-only-to-outlive-balloon-designs/",
+    "description": "The full title of this piece is \"if only to outlive Balloon Designs with Pauline\" and comes from a poem by Billy Collins."
+}
+    </script>
+    <link rel="stylesheet" href="../../style.css">
+</head>
+<body>
+    <header class="site">
+        <a href="../../">John Rising</a>
+    </header>
+
+    <main>
+        <article class="artwork">
+            <h1>if only to outlive Balloon Designs</h1>
+            <p class="meta">February 2024 · Generative, edition of 83</p>
+            <div class="frame" style="aspect-ratio: 1280 / 1600; width: min(100%, calc(80vh * 1280 / 1600))">
+                <iframe id="piece" title="if only to outlive Balloon Designs"></iframe>
+                <noscript><img src="still.jpg" alt="if only to outlive Balloon Designs"></noscript>
+            </div>
+            <p class="controls"><button id="reroll" type="button">New variation</button> · <a id="open" href="live/">Open full screen</a> · <a href="still.jpg">Still image</a></p>
+            <p>The full title of this piece is &quot;if only to outlive Balloon Designs with Pauline&quot; and comes from a poem by Billy Collins.</p>
+            <p class="provenance">This is a program, not a picture: each load draws a new variation from a random seed. Originally minted on fxhash. The code here is byte-identical to the original on IPFS (<code>QmZHLzeAXk97UdpGjicxAC8BcQF9zsqQF55U2vzi17gEzo</code>).</p>
+            <p><a href="../">← All work</a></p>
+        </article>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 John Rising</p>
+    </footer>
+    <script>
+        (function () {
+            var abc = "123456789abcdefghijkmnopqrstuvwxyzABCDEFGHJKLMNPQRSTUVWXYZ";
+            var frame = document.getElementById("piece");
+            function hash() {
+                var h = "oo";
+                var r = new Uint32Array(49);
+                crypto.getRandomValues(r);
+                for (var i = 0; i < 49; i++) h += abc[r[i] % abc.length];
+                return h;
+            }
+            function roll() {
+                var h = hash();
+                var src = (location.protocol === "file:" ? "live/index.html" : "live/") + "?fxhash=" + h;
+                frame.src = src;
+                document.getElementById("open").href = src;
+            }
+            document.getElementById("reroll").addEventListener("click", roll);
+            roll();
+        })();
+    </script>
+    <script>if(location.protocol==="file:")addEventListener("click",function(e){var a=e.target.closest&&e.target.closest("a[href]");if(a&&a.protocol==="file:"&&/\/$/.test(a.pathname)){e.preventDefault();location.href=a.pathname+"index.html"+a.search+a.hash}});</script>
+</body>
+</html>

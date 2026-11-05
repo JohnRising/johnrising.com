@@ -4,57 +4,107 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>John Rising</title>
+    <meta name="description" content="John Rising is an aerospace engineer and founder in Los Angeles. He built space systems at Virgin Galactic, Relativity Space, and SpaceX, then co-founded and ran Stackup and bymorning as CEO.">
+    <link rel="canonical" href="https://johnrising.com/">
+    <meta name="color-scheme" content="light dark">
+
+    <meta property="og:type" content="profile">
+    <meta property="og:url" content="https://johnrising.com/">
+    <meta property="og:title" content="John Rising">
+    <meta property="og:description" content="Aerospace engineer and founder. I build complex systems, and the teams that build them.">
+    <meta property="og:image" content="https://johnrising.com/john-rising.jpg">
+    <meta property="og:image:alt" content="John Rising">
+    <meta property="profile:first_name" content="John">
+    <meta property="profile:last_name" content="Rising">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="@johnrising_">
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "John Rising",
+        "url": "https://johnrising.com/",
+        "email": "mailto:hello@johnrising.com",
+        "image": "https://johnrising.com/john-rising.jpg",
+        "description": "Aerospace engineer and founder. Previously Virgin Galactic, Relativity Space (employee #1), and SpaceX; co-founder and CEO of Stackup and bymorning.",
+        "homeLocation": { "@type": "Place", "name": "Los Angeles, CA" },
+        "alumniOf": [
+            { "@type": "CollegeOrUniversity", "name": "Massachusetts Institute of Technology" },
+            { "@type": "CollegeOrUniversity", "name": "University of Southern California" }
+        ],
+        "knowsAbout": ["Aerospace engineering", "Space systems", "Launch vehicles", "Propulsion", "System safety", "STPA", "Thermo-fluid simulation"],
+        "sameAs": [
+            "https://www.linkedin.com/in/johnrising",
+            "https://github.com/JohnRising",
+            "https://x.com/johnrising_",
+            "https://scholar.google.com/citations?user=fd28vqwAAAAJ"
+        ]
+    }
+    </script>
+
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
+    <header class="intro">
+        <img class="photo" src="john-rising.jpg" alt="John Rising" width="88" height="88">
         <h1>John Rising</h1>
     </header>
 
     <main>
         <section id="about">
-            <p>I'm a founder and writer in Los Angeles. I started in aerospace, designing propulsion systems at Virgin Galactic, leading vehicle engineering at Relativity Space as employee #1, and managing missions at SpaceX. I have a master's from MIT and an engineering degree from USC.</p>
-            <p>Now I build software companies. I co-founded <a href="https://stackup.fi">Stackup</a>, a smart account platform for managing crypto operations, and I'm building <a href="https://bymorning.ai">bymorning</a>, a self-hosted AI gateway for aerospace and defense teams.</p>
-            <p>I write about how humans and AI work together, the aerospace industry, and building companies.</p>
+            <p>I'm an aerospace engineer who builds complex systems and the teams that build them.</p>
+            <p>I started my career at Virgin Galactic, designing propulsion systems for SpaceShipTwo. I was employee #1 at Relativity Space, where I led vehicle engineering, and I managed missions at SpaceX. I have a master's from MIT, where I studied launch vehicle safety with Nancy Leveson, and an engineering degree from USC.</p>
+            <p>In 2021 I became a software CEO. I co-founded <a href="https://stackup.fi" target="_blank" rel="noopener">Stackup</a>, then <a href="https://bymorning.ai" target="_blank" rel="noopener">bymorning</a>.</p>
+            <p>I live in Los Angeles.</p>
+        </section>
+
+        <section id="projects">
+            <h2>Projects</h2>
+            <ul>
+                <li><a href="https://github.com/OpenFLUME/OpenFLUME" target="_blank" rel="noopener">OpenFLUME</a> <span class="note">An open-source thermo-fluid network simulator in the spirit of GFSSP and SINDA/FLUINT. <a href="https://openflume.github.io/OpenFLUME/" target="_blank" rel="noopener">Try the web app</a>.</span></li>
+                <li><a href="https://bymorning.ai" target="_blank" rel="noopener">bymorning</a> <span class="note">Co-founder and CEO. AI gateway for aerospace and defense teams, now open source. I still maintain it (<a href="https://github.com/bymorning/bymorning" target="_blank" rel="noopener">code</a>).</span></li>
+                <li><a href="https://stackup.fi" target="_blank" rel="noopener">Stackup</a> <span class="note">Co-founder and CEO. Powered smart accounts for Coinbase Wallet, Visa, and Trust Wallet.</span></li>
+            </ul>
+        </section>
+
+        <section id="research">
+            <h2>Research &amp; patents</h2>
+            <ul>
+                <li><a href="research/rising-leveson-2018-stpa-space-launch-vehicles.pdf">Systems-Theoretic Process Analysis of Space Launch Vehicles</a> <span class="note">With Nancy Leveson. Journal of Space Safety Engineering, 2018. PDF, author's manuscript (<a href="https://doi.org/10.1016/j.jsse.2018.06.004" target="_blank" rel="noopener">published version</a>).</span></li>
+                <li><a href="research/rising-2018-mit-thesis-safety-guided-design.pdf">Safety-Guided Design &amp; Analysis of Space Launch Vehicles</a> <span class="note">Master's thesis, MIT, 2018. Advised by Nancy Leveson. PDF.</span></li>
+                <li><a href="research/US20240344163A1.pdf">Methods and Apparatuses Related to Payload Launch Vehicles</a> <span class="note">Relativity Space patent application US 2024/0344163, co-invented with Tim Ellis and Jordan Noone. PDF.</span></li>
+            </ul>
         </section>
 
         <section id="writing">
-            <h2>Writing</h2>
+            <h2>Selected writing</h2>
+            <ul>
+                <li><a href="writing/why-engineers-fail/">Why Engineers Fail When Building New Things</a></li>
+                <li><a href="writing/why-your-rocket-will-gain-weight/">Why Your Rocket Will Gain Weight (and What to Do About It)</a></li>
+                <li><a href="writing/crypto-accidents/">Crypto Accidents Aren't About Broken Parts</a></li>
+                <li><a href="writing/the-bybit-lesson/">The Bybit Lesson: Rethinking Treasury Wallet Security</a></li>
+                <li><a href="writing/why-we-walked-away/">Why We Walked Away from Our Thriving Infrastructure Business</a></li>
+            </ul>
+        </section>
 
-            <div class="writing-group">
-                <h3>Stackup</h3>
-                <ul>
-                    <li><a href="https://www.stackup.fi/resources/four-shades-of-account-abstraction">Four Shades of Account Abstraction</a></li>
-                    <li><a href="https://www.stackup.fi/resources/the-bybit-lesson-rethinking-treasury-wallet-security">The Bybit Lesson: Rethinking Treasury Wallet Security</a></li>
-                    <li><a href="https://www.stackup.fi/resources/cryptos-hidden-operations-crisis">Crypto's Hidden Operations Crisis</a></li>
-                    <li><a href="https://www.stackup.fi/resources/crypto-accidents">The Hidden Pattern Behind Every Crypto Accident</a></li>
-                    <li><a href="https://www.stackup.fi/resources/why-we-walked-away-from-our-thriving-infrastructure-business">Why We Walked Away from Our Thriving Infrastructure Business</a></li>
-                    <li><a href="https://www.stackup.fi/resources/the-2-dollar-bitcoin">The $2 Bitcoin</a></li>
-                    <li><a href="https://www.stackup.fi/resources/the-complete-guide-to-finance-for-crypto-founders">The Complete Guide to Finance for Crypto Founders</a></li>
-                    <li><a href="https://www.stackup.fi/resources/start-crypto-company-usa">The Complete Guide to Starting a Crypto Company in the United States</a></li>
-                    <li><a href="https://www.stackup.fi/resources/what-is-eip-4337">What is ERC-4337?</a></li>
-                </ul>
-            </div>
-
-            <div class="writing-group">
-                <h3>Aerospace</h3>
-                <ul>
-                    <li>2021 is the Year of Space Travel</li>
-                    <li>What an ARK Fund Could Mean for Space Startups</li>
-                    <li>Why Engineers Fail When Building New Things</li>
-                    <li>Why Your Rocket Will Gain Weight in 2021</li>
-                </ul>
-            </div>
+        <section id="side-projects">
+            <h2>Side projects</h2>
+            <ul>
+                <li><a href="art/">Generative art</a> <span class="note">Twelve small programs written in p5.js, 2022–2024. Each draws a new variation every time it runs.</span></li>
+            </ul>
         </section>
 
         <section id="contact">
             <h2>Contact</h2>
-            <p>hello@johnrising.com</p>
+            <p><a href="mailto:hello@johnrising.com">hello@johnrising.com</a></p>
+            <p class="links"><a href="https://www.linkedin.com/in/johnrising" target="_blank" rel="noopener">LinkedIn</a> · <a href="https://github.com/JohnRising" target="_blank" rel="noopener">GitHub</a> · <a href="https://x.com/johnrising_" target="_blank" rel="noopener">X</a> · <a href="https://scholar.google.com/citations?user=fd28vqwAAAAJ" target="_blank" rel="noopener">Google Scholar</a></p>
         </section>
     </main>
 
     <footer>
         <p>&copy; 2026 John Rising</p>
     </footer>
+    <script>if(location.protocol==="file:")addEventListener("click",function(e){var a=e.target.closest&&e.target.closest("a[href]");if(a&&a.protocol==="file:"&&/\/$/.test(a.pathname)){e.preventDefault();location.href=a.pathname+"index.html"+a.search+a.hash}});</script>
 </body>
 </html>
