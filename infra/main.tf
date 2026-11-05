@@ -42,7 +42,6 @@ resource "cloudflare_dns_record" "www" {
 # Email Routing: forwards hello@johnrising.com. Cloudflare adds the MX and SPF records.
 resource "cloudflare_email_routing_dns" "mail" {
   zone_id = cloudflare_zone.site.id
-  name    = "johnrising.com"
 }
 
 # Cloudflare emails this address a verification link on first apply.
