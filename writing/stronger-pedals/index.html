@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stronger Pedals — John Rising</title>
+    <meta name="description" content="A rocket tore itself apart with every component working as designed. The same control failure explains why prompt engineering feels like expertise.">
+    <link rel="canonical" href="https://johnrising.com/writing/stronger-pedals/">
+    <meta name="color-scheme" content="light dark">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://johnrising.com/writing/stronger-pedals/">
+    <meta property="og:title" content="Stronger Pedals">
+    <meta property="og:description" content="A rocket tore itself apart with every component working as designed. The same control failure explains why prompt engineering feels like expertise.">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="@johnrising_">
+    <script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "Stronger Pedals",
+    "description": "A rocket tore itself apart with every component working as designed. The same control failure explains why prompt engineering feels like expertise.",
+    "datePublished": "2026-04-21",
+    "author": {
+        "@type": "Person",
+        "name": "John Rising",
+        "url": "https://johnrising.com/"
+    },
+    "mainEntityOfPage": "https://johnrising.com/writing/stronger-pedals/"
+}
+    </script>
+    <link rel="stylesheet" href="../../style.css">
+</head>
+<body>
+    <header class="site">
+        <a href="../../">John Rising</a>
+    </header>
+
+    <main>
+        <article>
+            <h1>Stronger Pedals</h1>
+            <p class="meta"><time datetime="2026-04-21">April 2026</time> · First published on bymorning</p>
+
+            <p>The rocket tore itself apart at roughly 50,000 feet. I was standing at the edge of the runway in the Mojave Desert, part of the team about to take over the propulsion system. From where I stood it looked routine: a brief white cloud, nothing like the fireball I would have expected. It seemed controlled, almost gentle. Behind me, a group I'd later learn was the family of one of the pilots was quietly pulled away.</p>
+            <p>Every component had worked exactly as designed. The engine fired correctly, the brakes deployed correctly, and the safety mechanism was overpowered as designed. But the pilot's mental model of the flight, built inside simulators, under conditions that didn't match the actual environment, told him it was time, and nothing in the system corrected that belief. The disintegration was swift and total.</p>
+            <h2>Why systems fail when nothing breaks</h2>
+            <p>After that afternoon, I stopped looking for the broken part. Most engineering is built around preventing things from breaking. But most accidents happen when every part performs to specification and the system still destroys itself. That question, why everything works and the system still fails, followed me to MIT two years later, where my thesis advisor, Nancy Leveson, had spent decades figuring this out. Her work started from a counterintuitive premise: Accidents happen not because components break, but because of inadequate control. The problem isn't in the parts, it's in the relationships between them.</p>
+            <p>That was a decade ago. Today I'm staring at Claude's response for 45 seconds, trying to decide if the paragraph it just wrote is usable or if I need to scrap the entire exchange. The words look fine. They are grammatically correct, topically relevant, and arranged in apparent logical sequence. But something is wrong. I can feel it the way you feel Mr Beast smile - the shape is correct but the eyes aren't in on it.</p>
+            <p>In writing this very article, I asked for a paragraph connecting two ideas in a draft: one about feedback loops in complex systems, another about the design of chat interfaces. What I got back mentioned both topics, borrowed my vocabulary, matched my approximate sentence length, and said nothing. Every load-bearing word had been replaced with a near-synonym that carried no weight. The output was close enough to right that the wrongness was hard to name, which made it harder to fix than if it had been obviously bad.</p>
+            <p>This is not a communication failure. This is a control failure.</p>
+            <h2>Control loops and mental models</h2>
+            <p>Leveson's core idea is a control loop. A controller issues commands to a process. Feedback flows back, telling the controller what happened, so that the controller can issue more commands. The controller has some sort of internal model that it uses to decide what commands to issue. In humans we call it a mental model. This model contains its internal beliefs about what the system is doing, what state it's in, and what will happen if it issues a given command. The internal model is never the system itself, of course, it's just a representation. Accidents happen when the internal model diverges from reality.</p>
+            <p>The chat interface is a control loop with most of the feedback removed. I issue a command, Claude generates text, and I get back the output. That's it. There's no information about confidence or uncertainty, no signal about what was considered and rejected, which of my words it weighted heavily and which it ignored. My mental model of what Claude does is incomplete. When I talk to a person, I get constant micro-signals: hesitation, eye contact, tonal shifts that tell me whether we're aligned, whether my last sentence landed, and whether I need to adjust. Claude gives me text.</p>
+            <p>Just text.</p>
+            <h2>Chat removes the feedback</h2>
+            <p>The form is the problem. Chat imports the form of conversation (turn-taking, natural language, apparent mutual understanding) without the substance. A sufficiently capable model will eventually notice when my responses grow clipped and impatient, when I repeat the same criticism for the third time, but this is like saying a thermostat can see the weather because it reads the temperature. The bandwidth is so narrow, and the latency so high, that by the time the model detects my frustration, I've already spent twenty minutes generating it. The interface borrows the form of dialogue while gutting the mechanism that makes dialogue work. The longer the interaction continues, the wider the gap grows, until I'm ninety minutes into what should have been a twenty-minute task, performing labor the interface should be doing for me: managing the same misunderstanding for the fourth time, translating, monitoring, and correcting.</p>
+            <p>I spent six months getting good at this labor. I learned prompt engineering techniques, chain-of-thought approaches, and iterative refinement strategies. I developed custom GPTs. I felt a small glow of satisfaction when I got a model to do something tricky on the first try. And there's something genuinely enjoyable about prompting. The iterative back-and-forth has the same dopamine structure as opening a pack of Pokémon cards, the little hit of anticipation before you see if you get what you wanted.</p>
+            <p>It felt like expertise. It felt like play. But it wasn't, which requires a brief detour through aviation.</p>
+            <h2>The rudder pedals in the simulator</h2>
+            <p>There was a problem with flight simulators in the 1990s: Pilots kept breaking the rudder pedals. The pedals were identical to the ones in actual aircraft, the pilots were the same pilots, the forces involved were the same forces. But in the real aircraft, nobody broke anything.</p>
+            <p>The cause—which you probably already guessed—is the same failure I just described. When a pilot steps on the brakes in a real aircraft during landing rollout, the nose pitches down. The pilots feel it. Their vision shifts and they can feel their vestibular system registers deceleration. All of that feedback tells them, without thinking, how hard they're braking. The simulator didn't reproduce the pitch-down motion, so pilots, getting no feedback that their braking was working, just pressed harder and harder until the brake snapped.</p>
+            <p>I read this case study in my first year at MIT and found it almost comical: the image of a trained professional stomping harder and harder on a pedal that was working perfectly, the absence of feedback convincing him nothing was happening. It took me an embarrassingly long time to recognize myself in it. The prompt engineering notes, the chain-of-thought techniques, and the iterative refinement strategies are all just stomping on the pedals.</p>
+            <h2>Stronger pedals, not better feedback</h2>
+            <p>Most of the AI industry is doing the same thing. The cottage industry of prompt engineering courses, verification checklists, and "AI literacy" curricula are all stronger pedals. We're teaching users to compensate for missing feedback, celebrating the ones who compensate most efficiently, building career paths around the compensation.</p>
+            <p>What we're actually looking at is work that belongs to the system, silently transferred to the user because no one designed the feedback loop. The user learns to carry it, gets good at carrying it, and then we mistake the carrying for skill.</p>
+            <p>These borrowed chores accumulate: The time spent managing AI output rather than using it, the mental overhead of maintaining context across disconnected exchanges, the low-grade anxiety of working with systems whose behavior is unpredictable and whose state is hidden. We do not notice the cost because it is distributed across thousands of micro-interactions, because it masquerades as "learning to work with AI," and because the alternative, admitting that the tools require this much management, undermines the narrative of effortless augmentation.</p>
+            <h2>Adapting to a tool, or to a defect</h2>
+            <p>I use these systems every day. I have not stopped. I am faster now at the compensatory labor, faster at translating, and faster at recognizing when the process model has drifted and I need to reset. The question I keep turning over is whether you can design the feedback back in; not simulate it, not approximate it with checklists, but actually close the loop. I don't have the answer, but I do have a company trying to find it.</p>
+            <p>I do not know if I am adapting to a tool, or only to a defect. The pedals work fine. I just keep pressing harder.</p>
+            <p>From where I stood, the flight in Mojave looked routine. A brief white cloud, the kind you'd expect if the flight ended early on purpose. Nothing in what I could see told me something had gone wrong.</p>
+        </article>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 John Rising</p>
+    </footer>
+    <script>if(location.protocol==="file:")addEventListener("click",function(e){var a=e.target.closest&&e.target.closest("a[href]");if(a&&a.protocol==="file:"&&/\/$/.test(a.pathname)){e.preventDefault();location.href=a.pathname+"index.html"+a.search+a.hash}});</script>
+</body>
+</html>
